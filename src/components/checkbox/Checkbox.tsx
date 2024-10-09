@@ -10,7 +10,7 @@ type Checkbox = {
 
 type CheckboxProps = {
   group: Checkbox[];
-  onChange: (newValue: (string | number)[]) => void;
+  onChange: any;
   className?: string;
 };
 
