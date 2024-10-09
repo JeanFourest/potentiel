@@ -17,7 +17,7 @@ type CheckboxProps = {
 function Checkbox({
   group,
   onChange,
-  className = "checkbox-vertical",
+  className = "checkbox",
 }: CheckboxProps) {
   const [checkboxes, setCheckboxes] = useState(group);
   const handleChange = (index: number) => {
