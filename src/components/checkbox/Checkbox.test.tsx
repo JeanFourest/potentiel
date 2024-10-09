@@ -96,6 +96,6 @@ describe("Checkbox", () => {
     expect(checkboxes).toHaveLength(3);
 
     fireEvent.click(checkboxes[0]);
-    expect(values[0]).toEqual(["checkAll", "option1",]);
+    expect(values[0]).toEqual(["checkAll", "option1", "option2"]);
   });
 });
