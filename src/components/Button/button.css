@@ -1,0 +1,33 @@
+.buttonStyle {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: black 1px solid;
+    border-radius: 20px;
+}
+
+.rounded {
+    border-radius: 50px;
+}
+
+.danger {
+    background-color: red;
+    color: black;
+}
+
+.success {
+    background-color: green;
+    color: white;
+}
+
+.secondary {
+    background-color: grey;
+    color: white;
+}
+
+.primary {
+    background-color: blue;
+    color: white;
+}
