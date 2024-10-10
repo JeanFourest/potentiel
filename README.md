@@ -53,3 +53,24 @@ const [group, setGroup] = useState([
 
 - `onChange`: retourne un tableau contenant les valeurs des checkbox cochés
 - `className`: vou pouvez ajouter une classe css => checkbox(default), checkbox-sm ou checkbox-lg
+
+## Select 
+
+Props du select : 
+
+- `options` : prend deux valeurs :
+  - `value`: `string ou number`: la valeur de l'option
+  - `label`: `string`: texte descriptif de l'option
+- `className`: `string`: ajouter autant de classes que souhaitées 
+- `multiple`: `boolean`: permettre de choisir plusieurs options
+- `size`: `number ou never`: nombre d'options visible dans un select. À ajouter ou non pour un select multiple, inutile pour un select non multiple
+- `disabled`: `boolean`: activer ou désactiver l'utilisation du select
+- `onChange`: `string ou string[]`: enregister les intéractions utilisateurs et effectuer des actions spécifiques
+
+## Loader
+
+Props du loader : 
+
+- `type`: `spinner ou progress-bar`: choix du loader
+- `progress`: `number`: nombre pour la progression de la barre de progression
+- `className`: `string`: ajouter autant de classes que souhaitées 

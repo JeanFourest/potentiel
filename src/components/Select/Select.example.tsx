@@ -37,7 +37,7 @@ function SelectExample() {
 </select>`;
 
     return (
-      <div className='component'>
+      <div className='component-row'>
         <div className='componentCode'>
             <SelectComponent
             options={[
@@ -81,12 +81,12 @@ function SelectExample() {
             />
 
             <div className="code-example-container">
-            <pre>
-                <code>{codeExample2}</code>
-            </pre>
-            <button className="copy-button" onClick={() => navigator.clipboard.writeText(codeExample2)}>
-                Copy Code
-            </button>
+                <pre>
+                    <code>{codeExample2}</code>
+                </pre>
+                <button className="copy-button" onClick={() => navigator.clipboard.writeText(codeExample2)}>
+                    Copy Code
+                </button>
             </div>
         </div>
 
@@ -105,12 +105,12 @@ function SelectExample() {
             />
 
             <div className="code-example-container">
-            <pre>
-                <code>{codeExample3}</code>
-            </pre>
-            <button className="copy-button" onClick={() => navigator.clipboard.writeText(codeExample3)}>
-                Copy Code
-            </button>
+                <pre>
+                    <code>{codeExample3}</code>
+                </pre>
+                <button className="copy-button" onClick={() => navigator.clipboard.writeText(codeExample3)}>
+                    Copy Code
+                </button>
             </div>
         </div>
 

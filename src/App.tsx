@@ -6,6 +6,7 @@ import { FaBeer } from "react-icons/fa";
 import SelectExample from './components/Select/Select.example';
 import Checkbox from "./components/checkbox/Checkbox";
 import Button from "./components/Button/Button";
+import LoaderExample from "./components/Loader/loader.example";
 
 function App() {
   const [values, setValues] = useState<(string | number)[]>([]);
@@ -18,6 +19,7 @@ function App() {
   return (
     <>
       <SelectExample/>
+      <LoaderExample/>
       <Checkbox
         group={[
           { label: "All", value: "all", checked: false, checkAll: true },
