@@ -1,0 +1,39 @@
+.checkbox {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  text-align: left;
+  padding: 0;
+  margin: 0.5em;
+}
+
+.checkbox-checkAll {
+  margin-bottom: 0.5em;
+  font-weight: 500;
+}
+
+.checkbox-sm {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  text-align: left;
+  padding: 0;
+  margin: 0.5em;
+  font-size: 0.8em;
+}
+.checkbox-sm input[type="checkbox"] {
+  transform: scale(0.8);
+}
+
+.checkbox-lg {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  text-align: left;
+  padding: 0;
+  margin: 0.5em;
+  font-size: 1.2em;
+}
+.checkbox-lg input[type="checkbox"] {
+  transform: scale(1.2);
+}

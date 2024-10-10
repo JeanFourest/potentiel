@@ -2,17 +2,19 @@ import React from 'react';
 import './radio.css';
 
 interface RadioProps {
-    titre: string;
-    label: string;
-    number: number;
+    titre?: string;
+    labels: Array<string>;
 }
 
-const Radio: React.FC<RadioProps> = ({ titre, label, number}) => {
+const Radio: React.FC<RadioProps> = ({ titre, labels}) => {
     return (
         <div>
-            <h1>{titre}</h1>
-            <label>{label}</label>
-            <input type="radio" />
+            <h2>{titre}</h2>
+            {labels.map((label) => (
+                <div>
+                    <input type="radio" value={label}/>
+                    <label>{label}</label>
+                </div>))}
         </div>
     );
 }
