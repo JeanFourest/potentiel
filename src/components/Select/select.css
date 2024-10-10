@@ -1,0 +1,35 @@
+.select {
+    border-radius: 5px;
+    padding: 5px;
+    padding-right: 13px;
+    font-size: medium
+}
+
+.select-lg {
+    border-radius: 5px;
+    padding: 5px;
+    padding-right: 13px;
+    font-size: larger;
+}
+
+.select-sm {
+    border-radius: 5px;
+    padding: 5px;
+    padding-right: 13px;
+    font-size: smaller;
+}
+
+.select option {
+    padding: 1%;
+    border-radius: 3px;
+}
+
+.select-lg option {
+    padding: 1%;
+    border-radius: 3px;
+}
+
+.select-sm option {
+    padding: 1%;
+    border-radius: 3px;
+}
