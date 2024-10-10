@@ -1,4 +1,3 @@
-
 import Radio from './components/Radio/Radio'
 
 import './App.css';
@@ -10,6 +9,8 @@ import { FaBeer } from "react-icons/fa";
 import SelectExample from './components/Select/Select.example';
 import Checkbox from "./components/checkbox/Checkbox";
 import Button from "./components/Button/Button";
+import Card from "./components/Card/Card";
+import imageUrl from './components/assets/images/beau gosse.png';
 
 function App() {
   const [values, setValues] = useState<(string | number)[]>([]);
@@ -47,6 +48,10 @@ function App() {
       <Radio titre="titre" labels={["label", "ntm", "bitch"]} />
       <Button text="ok" onClick={handleClick} extraClass="danger fullWidth" disabled={true}/>
       <Button icon={<FaBeer />} text="bière" onClick={handleClick} extraClass="success right" disabled={false} />
+      <div className='width'>
+        <Card titre="WOW" imageUrl={imageUrl} description='Chokbar' actionText='voir plus' extraClass="height-500 width-30" onActionClick={handleClick} />
+        <Card titre="WOW" imageUrl={imageUrl} description='Chokbar' actionText='voir plus' extraClass="height-500 width-50" onActionClick={handleClick} />
+      </div>
     </>
   );
 }
