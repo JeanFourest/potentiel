@@ -9,20 +9,49 @@ import { FaBeer } from "react-icons/fa";
 import SelectExample from './components/Select/Select.example';
 import Checkbox from "./components/checkbox/Checkbox";
 import Button from "./components/Button/Button";
-import LoaderExample from "./components/Loader/loader.example";
+import LoaderExample from "./components/Loader/Loader.example";
 
 import Card from "./components/Card/Card";
 import imageUrl from './components/assets/images/beau gosse.png';
 
 import Input from './components/Input/Input';
+import Modal from './components/Modal/Modal';
+
+interface CardData {
+  titre: string;
+  imageUrl: string;
+  content: string;
+  actionText: string;
+  extraClass: string;
+}
 
 function App() {
   const [values, setValues] = useState<(string | number)[]>([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedCard, setSelectedCard] = useState<CardData | null>(null);
   console.log(values);
 
   const handleClick = () => {
     alert("YOOOOOOOOOOOOOOOOOOOO");
   };
+
+  const openModal = (card: CardData) => {
+    setSelectedCard(card);
+    setIsModalOpen(true);
+};
+
+const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedCard(null);
+};
+
+const cardData: CardData = {
+    titre: "WOW",
+    imageUrl: imageUrl,
+    content: "Chokbar",
+    actionText: "voir plus",
+    extraClass: "height-500 width-30"
+};
 
   const [formData, setFormData] = useState({
     text: '',
@@ -76,9 +105,19 @@ function App() {
       <Button icon={<FaBeer />} text="bière" onClick={handleClick} extraClass="success right" disabled={false} />
 
       <div className='width'>
-        <Card titre="WOW" imageUrl={imageUrl} description='Chokbar' actionText='voir plus' extraClass="height-500 width-30" onActionClick={handleClick} />
+        <Card titre="WOW" imageUrl={imageUrl} description='Chokbar' actionText='voir plus' extraClass="height-500 width-30" onActionClick={()=> openModal(cardData)} />
         <Card titre="WOW" imageUrl={imageUrl} description='Chokbar' actionText='voir plus' extraClass="height-500 width-50" onActionClick={handleClick} />
       </div>
+
+      {selectedCard && (
+                <Modal 
+                    isOpen={isModalOpen} 
+                    title={selectedCard.titre} 
+                    content={selectedCard.content}
+                    imgUrl={selectedCard.imageUrl}
+                    onClose={closeModal} 
+                />
+            )}
 
       <form onSubmit={handleSubmit}>
       <Input
@@ -123,7 +162,7 @@ function App() {
         onChange={handleChange}
         name="date"
       />
-      <button type="submit">Soumettre</button>
+      <button type="submit" className='button'>Soumettre</button>
     </form>
     </>
   );

@@ -1,5 +1,5 @@
 /* Styles globaux */
-body {
+/* body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f7f6;
     margin: 0;
@@ -8,7 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-  }
+  } */
   
   form {
     background-color: white;
@@ -68,7 +68,7 @@ body {
   }
   
   /* Button Styles */
-  button {
+  .button {
     width: 100%;
     padding: 12px 20px;
     font-size: 16px;
@@ -81,12 +81,12 @@ body {
     transition: background-color 0.3s ease, transform 0.2s ease;
   }
   
-  button:hover {
+  .button:hover {
     background-color: #0056b3;
     transform: translateY(-2px);
   }
   
-  button:disabled {
+  .button:disabled {
     background-color: #cccccc;
     cursor: not-allowed;
   }
@@ -106,7 +106,7 @@ body {
       padding: 10px;
     }
   
-    button {
+    .button {
       font-size: 14px;
       padding: 10px;
     }
