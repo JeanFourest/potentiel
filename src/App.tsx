@@ -1,5 +1,9 @@
+
+import Radio from './components/Radio/Radio'
+
 import './App.css';
 import './components/assets/styleGeneral.css';
+
 import { useState } from "react";
 import { FaBeer } from "react-icons/fa";
 
@@ -31,15 +35,18 @@ function App() {
       <Button
         text="ok"
         onClick={() => handleClick()}
-        extraClass="danger rounded"
+        extraClass="danger"
         disabled={true}
       />
       <Button
         icon={<FaBeer />}
         onClick={() => handleClick()}
-        extraClass="success rounded"
+        extraClass="outline-success"
         disabled={false}
       />
+      <Radio titre="titre" labels={["label", "ntm", "bitch"]} />
+      <Button text="ok" onClick={handleClick} extraClass="danger fullWidth" disabled={true}/>
+      <Button icon={<FaBeer />} text="bière" onClick={handleClick} extraClass="success right" disabled={false} />
     </>
   );
 }
