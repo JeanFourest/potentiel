@@ -1,0 +1,28 @@
+name: Test components
+
+on:
+  push:
+    branches:
+      - pre_main
+      - main
+  pull_request:
+    branches:
+      - pre_main
+      - main
+
+jobs:
+  test:
+    name: run tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '20.11.0'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm run test
