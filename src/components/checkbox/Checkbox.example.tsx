@@ -6,54 +6,55 @@ function CheckboxExample() {
   };
 
   const codeExample1 = `
-    <Checkbox
-        group={[
-            { label: "All", value: "all", checked: false, checkAll: true },
-            { label: "option 1", value: 1, checked: false, checkAll: false },
-            {
-            label: "option 2",
-            value: 2,
-            checked: false,
-            checkAll: false,
-            },
-            {
-            label: "option 3",
-            value: 3,
-            checked: false,
-            checkAll: false,
-            },
-        ]}
-        onChange={(e: any) => setValues(e)}
-        className="checkbox"
-    />
+  <div class="checkbox-sm">
+
+    <div class="checkbox-checkAll">
+      <input type="checkbox" value="all" />
+      <label for="all">All</label>
+    </div>
+
+    <div>
+      <input type="checkbox" value="1" />
+      <label for="1">option 1</label>
+    </div>
+
+    <div>
+      <input type="checkbox" value="2" />
+      <label for="2">option 2</label>
+    </div>
+
+    <div>
+      <input type="checkbox" value="3" />
+      <label for="3">option 3</label>
+    </div>
+    
+  </div>
     `;
 
   const codeExample2 = `
-    <Checkbox
-        group={[
-            { label: "option 1", value: 1, checked: false, checkAll: false },
-            {
-            label: "option 2",
-            value: 2,
-            checked: false,
-            checkAll: false,
-            },
-            {
-            label: "option 3",
-            value: 3,
-            checked: false,
-            checkAll: false,
-            },
-            {
-            label: "option 4",
-            value: 4,
-            checked: false,
-            checkAll: false,
-            },
-        ]}
-        onChange={(e: any) => setValues(e)}
-        className="checkbox"
-    />
+  <div class="checkbox-lg">
+
+    <div>
+      <input type="checkbox" value="1" />
+      <label for="1">option 1</label>
+    </div>
+
+    <div>
+      <input type="checkbox" value="2" />
+      <label for="2">option 2</label>
+    </div>
+
+    <div>
+      <input type="checkbox" value="3" />
+      <label for="3">option 3</label>
+    </div>
+
+    <div>
+      <input type="checkbox" value="4" />
+      <label for="4">option 4</label>
+    </div>
+    
+  </div>
     `;
 
   return (
@@ -78,7 +79,7 @@ function CheckboxExample() {
               },
             ]}
             onChange={(e: any) => setValues(e)}
-            className="checkbox"
+            className="checkbox-sm"
           />
         </div>
 
@@ -120,7 +121,7 @@ function CheckboxExample() {
               },
             ]}
             onChange={(e: any) => setValues(e)}
-            className="checkbox"
+            className="checkbox-lg"
           />
         </div>
 

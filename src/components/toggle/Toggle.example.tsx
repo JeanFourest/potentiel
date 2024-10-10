@@ -3,17 +3,26 @@ import Toggle from "./Toggle";
 
 function ToggleExample() {
   const [values, setValues] = useState(false);
+  const [values2, setValues2] = useState(false);
 
   const handleOnChange = () => {
     setValues(!values);
   };
+
+  const handleOnChange2 = () => {
+    setValues2(!values2);
+  };
   console.log(values);
   const codeExample1 = `
-    <Toggle
-        isToggled={values}
-        rounded={true}
-        onToggle={() => handleOnChange()}
-    />
+    <label className=switch-lg>
+      <input type="checkbox" />
+      <span className="slider round" />
+    </label>
+    
+    <label className=switch-sm>
+      <input type="checkbox" />
+      <span className="slider" />
+    </label>
     `;
 
   return (
@@ -23,7 +32,14 @@ function ToggleExample() {
           <Toggle
             isToggled={values}
             rounded={true}
+            className="switch-lg"
             onToggle={() => handleOnChange()}
+          />
+          <Toggle
+            isToggled={values2}
+            rounded={false}
+            className="switch-sm"
+            onToggle={() => handleOnChange2()}
           />
         </div>
 
