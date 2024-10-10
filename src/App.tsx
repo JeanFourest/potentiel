@@ -1,8 +1,11 @@
+import './App.css';
+import './components/assets/styleGeneral.css';
 import { useState } from "react";
-import "./App.css";
+import { FaBeer } from "react-icons/fa";
+
+import SelectExample from './components/Select/Select.example';
 import Checkbox from "./components/checkbox/Checkbox";
 import Button from "./components/Button/Button";
-import { FaBeer } from "react-icons/fa";
 
 function App() {
   const [values, setValues] = useState<(string | number)[]>([]);
@@ -14,6 +17,7 @@ function App() {
 
   return (
     <>
+      <SelectExample/>
       <Checkbox
         group={[
           { label: "All", value: "all", checked: false, checkAll: true },
