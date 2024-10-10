@@ -9,6 +9,7 @@ import { FaBeer } from "react-icons/fa";
 import SelectExample from './components/Select/Select.example';
 import Checkbox from "./components/checkbox/Checkbox";
 import Button from "./components/Button/Button";
+import LoaderExample from "./components/Loader/loader.example";
 
 import Card from "./components/Card/Card";
 import imageUrl from './components/assets/images/beau gosse.png';
@@ -47,6 +48,7 @@ function App() {
   return (
     <>
       <SelectExample/>
+      <LoaderExample/>
       <Checkbox
         group={[
           { label: "All", value: "all", checked: false, checkAll: true },

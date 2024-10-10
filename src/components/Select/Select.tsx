@@ -40,7 +40,7 @@ const SelectComponent: React.FC<SelectComponentProps> = (props) => {
   if (disabled) {
     return (
 
-        <div className="container">
+        <div className="container-row">
           <select className={className} multiple={multiple} size={size} onChange={handleChange} disabled>
             {options.map((option) => (
               <option key={option.value} value={option.value}>
@@ -54,7 +54,7 @@ const SelectComponent: React.FC<SelectComponentProps> = (props) => {
   } else {
     return (
       
-        <div className="container">
+        <div className="container-row">
           <select className={className} multiple={multiple} size={size} onChange={handleChange}>
             {options.map((option) => (
               <option key={option.value} value={option.value}>
