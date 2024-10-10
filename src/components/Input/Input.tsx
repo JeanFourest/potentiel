@@ -1,9 +1,9 @@
-import React from 'react';
-import './Input.css'; // Importation du fichier CSS
+import React from "react";
+import "./Input.css"; // Importation du fichier CSS
 
 type InputProps = {
   label?: string;
-  type: 'text' | 'email' | 'password' | 'number' | 'date';
+  type: "text" | "email" | "password" | "number" | "date";
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   required?: boolean;
@@ -25,12 +25,13 @@ const Input: React.FC<InputProps> = ({
   maxLength,
   disabled = false,
   readOnly = false,
-  placeholder = '',
+  placeholder = "",
   name, // Récupération du nom
 }) => {
   return (
     <div className="input-container">
-      {label && <label htmlFor={name}>{label}</label>} {/* Utilisation de htmlFor pour l'accessibilité */}
+      {label && <label htmlFor={name}>{label}</label>}{" "}
+      {/* Utilisation de htmlFor pour l'accessibilité */}
       <input
         id={name} // Ajout d'un id pour l'accessibilité
         type={type}
