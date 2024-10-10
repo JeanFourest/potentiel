@@ -1,6 +1,5 @@
 
 import Radio from './components/Radio/Radio'
-import { FaBeer } from 'react-icons/fa';
 
 import './App.css';
 import './components/assets/styleGeneral.css';

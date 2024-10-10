@@ -2,7 +2,6 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Button from "./Button";
 import { FaBeer } from "react-icons/fa";
-import React from "react";
 
 describe("Button Component", () => {
     test("renders button with text", () => {
