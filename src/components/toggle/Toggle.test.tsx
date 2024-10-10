@@ -6,7 +6,6 @@ describe("Toggle", () => {
   test("component should render with rounded class", () => {
     render(<Toggle rounded={true} />);
     const toggle = screen.getByRole("checkbox");
-    // get span
     const span = toggle.nextElementSibling;
     expect(span).toHaveClass("round");
   });
@@ -14,7 +13,6 @@ describe("Toggle", () => {
   test("component should render with squared class", () => {
     render(<Toggle />);
     const toggle = screen.getByRole("checkbox");
-    // get span
     const span = toggle.nextElementSibling;
     expect(span).not.toHaveClass("round");
   });

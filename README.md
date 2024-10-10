@@ -61,12 +61,34 @@ Props du toggle:
 - `rounded`: boolean (défaut: false) permet d'arrondir les coins du toggle
 - `isToggled`: boolean (défaut: false) permet de définir si le toggle est activé ou non
 - `onToggle`: fonction qui retourne un boolean (true si le toggle est activé, false sinon)
-- `className`: string (défaut: 'switch') permet d'ajouter une classe css
+- `className`: string (défaut: 'switch-sm') permet d'ajouter une classe css
 
 ```javascript
 <Toggle
   rounded={true}
-  onToggle={(e: any) => console.log(e)}
-  isToggled={false}
+  onToggle={() => handleToggle()}
+  isToggled={isToggled}
+  className="switch-md"
 />
 ```
+
+## Select
+
+Props du select :
+
+- `options` : prend deux valeurs :
+  - `value`: `string ou number`: la valeur de l'option
+  - `label`: `string`: texte descriptif de l'option
+- `className`: `string`: ajouter autant de classes que souhaitées
+- `multiple`: `boolean`: permettre de choisir plusieurs options
+- `size`: `number ou never`: nombre d'options visible dans un select. À ajouter ou non pour un select multiple, inutile pour un select non multiple
+- `disabled`: `boolean`: activer ou désactiver l'utilisation du select
+- `onChange`: `string ou string[]`: enregister les intéractions utilisateurs et effectuer des actions spécifiques
+
+## Loader
+
+Props du loader :
+
+- `type`: `spinner ou progress-bar`: choix du loader
+- `progress`: `number`: nombre pour la progression de la barre de progression
+- `className`: `string`: ajouter autant de classes que souhaitées
