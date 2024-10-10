@@ -53,3 +53,20 @@ const [group, setGroup] = useState([
 
 - `onChange`: retourne un tableau contenant les valeurs des checkbox cochés
 - `className`: vou pouvez ajouter une classe css => checkbox(default), checkbox-sm ou checkbox-lg
+
+## Toggle
+
+Props du toggle:
+
+- `rounded`: boolean (défaut: false) permet d'arrondir les coins du toggle
+- `isToggled`: boolean (défaut: false) permet de définir si le toggle est activé ou non
+- `onToggle`: fonction qui retourne un boolean (true si le toggle est activé, false sinon)
+- `className`: string (défaut: 'switch') permet d'ajouter une classe css
+
+```javascript
+<Toggle
+  rounded={true}
+  onToggle={(e: any) => console.log(e)}
+  isToggled={false}
+/>
+```

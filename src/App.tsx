@@ -1,15 +1,15 @@
+import Radio from "./components/Radio/Radio";
 
-import Radio from './components/Radio/Radio'
-
-import './App.css';
-import './components/assets/styleGeneral.css';
+import "./App.css";
+import "./components/assets/styleGeneral.css";
 
 import { useState } from "react";
 import { FaBeer } from "react-icons/fa";
 
-import SelectExample from './components/Select/Select.example';
+import SelectExample from "./components/Select/Select.example";
 import Checkbox from "./components/checkbox/Checkbox";
 import Button from "./components/Button/Button";
+import Toggle from "./components/Toggle/Toggle";
 
 function App() {
   const [values, setValues] = useState<(string | number)[]>([]);
@@ -21,7 +21,7 @@ function App() {
 
   return (
     <>
-      <SelectExample/>
+      <SelectExample />
       <Checkbox
         group={[
           { label: "All", value: "all", checked: false, checkAll: true },
@@ -45,8 +45,24 @@ function App() {
         disabled={false}
       />
       <Radio titre="titre" labels={["label", "ntm", "bitch"]} />
-      <Button text="ok" onClick={handleClick} extraClass="danger fullWidth" disabled={true}/>
-      <Button icon={<FaBeer />} text="bière" onClick={handleClick} extraClass="success right" disabled={false} />
+      <Button
+        text="ok"
+        onClick={handleClick}
+        extraClass="danger fullWidth"
+        disabled={true}
+      />
+      <Button
+        icon={<FaBeer />}
+        text="bière"
+        onClick={handleClick}
+        extraClass="success right"
+        disabled={false}
+      />
+      <Toggle
+        rounded={true}
+        onToggle={(e: any) => console.log(e)}
+        isToggled={false}
+      />
     </>
   );
 }
