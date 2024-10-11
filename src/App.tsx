@@ -6,7 +6,11 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 import SelectExample from './components/Select/Select.example';
 import LoaderExample from "./components/Loader/Loader.example";
-import imageUrl from './components/assets/images/beaugosse.png';
+
+import Card from "./components/Card/Card";
+import imageUrl from './components/assets/images/beau gosse.png';
+import InputExample from './components/Input/Input.example';
+import Radio from './components/Radio/Radio'
 import CarouselExample from './components/Carousel/Carousel.example';
 import AlertExample from './components/Alert/Alert.example';
 import ButtonExample from './components/Button/Button.example';
@@ -40,27 +44,6 @@ const cardData: CardData = {
     actionText: "voir plus",
     extraClass: "height-500 width-30"
 };
-
-  const [formData, setFormData] = useState({
-    text: "",
-    email: "",
-    password: "",
-    number: "",
-    date: "",
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value, // Met à jour l'état pour le champ spécifique
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Formulaire soumis:", formData);
-  };
 
   const [isToggled, setIsToggled] = useState(true);
   const handleToggle = () => {
@@ -107,6 +90,7 @@ const cardData: CardData = {
             <Routes>
             <Route path="/select" element={<SelectExample />} />
             <Route path="/loader" element={<LoaderExample />} />
+            <Route path="/input" element={<InputExample />} />
             <Route path="/card" element={<CardExample />} />
             <Route path="/checkbox" element={<CheckboxExample />} />
             <Route path="/button" element={<ButtonExample />} />
@@ -114,7 +98,6 @@ const cardData: CardData = {
             <Route path="/toggle" element={<ToggleExample />} />
             <Route path="/alert" element={<AlertExample />} />
             {/* <Route path="/input" element={<BreadcrumbExample />} /> */}
-            {/* <Route path="/input" element={<CardExample />} /> */}
             <Route path="/accordeon" element={<AccordeonExample />} /> 
             <Route path="/carousel" element={<CarouselExample />} />
             <Route path="/modal" element={<ModalExample />} />
