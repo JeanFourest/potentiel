@@ -2,20 +2,16 @@ import './App.css';
 import './components/assets/styleGeneral.css';
 
 import { useState } from "react";
-import { FaBeer } from "react-icons/fa";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 import SelectExample from './components/Select/Select.example';
-import Checkbox from "./components/Checkbox/Checkbox";
-import Button from "./components/Button/Button";
 import LoaderExample from "./components/Loader/Loader.example";
 import Card from "./components/Card/Card";
 import imageUrl from './components/assets/images/beau gosse.png';
-import Input from './components/Input/Input';
-import Radio from './components/Radio/Radio'
 import CarouselExample from './components/Carousel/Carousel.example';
 import CheckboxExample from './components/checkbox/Checkbox.example';
-import ToggleExample from './components/Toggle/Toggle.example';
+import ToggleExample from './components/toggle/Toggle.example';
+import ButtonExample from './components/Button/Button.example';
 
 function App() {
   const [values, setValues] = useState<(string | number)[]>([]);
@@ -113,7 +109,7 @@ const cardData: CardData = {
             <Route path="/loader" element={<LoaderExample />} />
             <Route path="/card" element={<Card />} />
             <Route path="/checkbox" element={<CheckboxExample />} />
-            {/* <Route path="/button" element={<ButtonExample />} /> */}
+            <Route path="/button" element={<ButtonExample />} />
             {/* <Route path="/input" element={<RadioExample />} /> */}
             <Route path="/toggle" element={<ToggleExample />} />
             {/* <Route path="/input" element={<AlertExample />} /> */}
