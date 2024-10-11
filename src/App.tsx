@@ -6,14 +6,14 @@ import SelectExample from './components/Select/Select.example';
 import LoaderExample from "./components/Loader/Loader.example";
 import InputExample from './components/Input/Input.example';
 import CarouselExample from './components/Carousel/Carousel.example';
-import AlertExample from './components/Alert/Alert.example';
 import ButtonExample from './components/Button/Button.example';
 import RadioExample from './components/Radio/Radio.example';
 import CardExample from './components/Card/Card.example';
 import ModalExample from './components/Modal/Modal.example';
 import AccordeonExample from './components/Accordeon/Accordeon.example';
-import CheckboxExample from './components/Checkbox/Checkbox.example';
-import ToggleExample from './components/Toggle/Toggle.example';
+import CheckboxExample from './components/checkbox/Checkbox.example';
+import ToggleExample from './components/toggle/Toggle.example';
+import AlertExample from './components/Alert/Alert.example';
 
 function App() {
 
@@ -66,7 +66,7 @@ function App() {
               <Route path="/toggle" element={<ToggleExample />} />
               <Route path="/button" element={<ButtonExample />} />
               <Route path="/loader" element={<LoaderExample />} />
-              {/* <Route path="/input" element={<AlertExample />} /> */}
+              <Route path="/alert" element={<AlertExample />} />
               {/* <Route path="/input" element={<BreadcrumbExample />} /> */}
               <Route path="/card" element={<CardExample />} />
               <Route path="/accordeon" element={<AccordeonExample />} /> 
