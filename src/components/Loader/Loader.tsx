@@ -14,7 +14,7 @@ const LoaderComponent: React.FC<LoaderProps> = ({ type, progress = 0, className 
     if (type === "spinner") {
         return (
             <div className="spinner-circle">
-                <div className={dynamicClassName}></div>
+                <div className={dynamicClassName} role="presentation"></div>
             </div>
         );
     } else if (type === "progress-bar") {
