@@ -13,17 +13,22 @@ function ToggleExample() {
     setValues2(!values2);
   };
   console.log(values);
+
   const codeExample1 = `
-    <label className=switch-lg>
-      <input type="checkbox" />
-      <span className="slider round" />
-    </label>
+    <Toggle
+      isToggled=false
+      rounded=true
+      className="switch-lg"
+      onToggle=...
+    />
     
-    <label className=switch-sm>
-      <input type="checkbox" />
-      <span className="slider" />
-    </label>
-    `;
+    <Toggle
+      isToggled=false
+      rounded=false
+      className="switch-sm"
+      onToggle=...
+    />
+  `;
 
   return (
     <div className="component-column">

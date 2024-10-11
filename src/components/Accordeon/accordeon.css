@@ -1,0 +1,30 @@
+.accordeon {
+    width: 95%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.accordeon-header {
+    background-color: #ffffff;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.accordeon-header:hover {
+    background-color: #e0e0e0;
+}
+
+.accordeon-content {
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #ddd;
+}
+
+.accordeon-content:last-child {
+    border-bottom: none;
+}

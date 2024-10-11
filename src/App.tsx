@@ -14,9 +14,10 @@ import imageUrl from './components/assets/images/beau gosse.png';
 import Input from './components/Input/Input';
 import Radio from './components/Radio/Radio'
 import CarouselExample from './components/Carousel/Carousel.example';
-import CheckboxExample from './components/checkbox/Checkbox.example';
+import CheckboxExample from './components/Checkbox/Checkbox.example';
 import ToggleExample from './components/Toggle/Toggle.example';
 import AlertExample from './components/Alert/Alert.example';
+import AccordeonExample from './components/Accordeon/Accordeon.example';
 
 function App() {
   const [values, setValues] = useState<(string | number)[]>([]);
@@ -120,7 +121,7 @@ const cardData: CardData = {
             <Route path="/alert" element={<AlertExample />} />
             {/* <Route path="/input" element={<BreadcrumbExample />} /> */}
             {/* <Route path="/input" element={<CardExample />} /> */}
-            {/* <Route path="/input" element={<AccordeonExample />} /> */}
+            <Route path="/accordeon" element={<AccordeonExample />} /> 
             <Route path="/carousel" element={<CarouselExample />} />
             {/* <Route path="/input" element={<ModalExample />} /> */}
             {/* <Route path="/input" element={<TabsExample />} /> */}
