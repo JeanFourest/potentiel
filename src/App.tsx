@@ -19,11 +19,31 @@ import ToggleExample from './components/Toggle/Toggle.example';
 
 function App() {
   const [values, setValues] = useState<(string | number)[]>([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedCard, setSelectedCard] = useState<CardData | null>(null);
   console.log(values);
 
   const handleClick = () => {
     alert("YOOOOOOOOOOOOOOOOOOOO");
   };
+
+  const openModal = (card: CardData) => {
+    setSelectedCard(card);
+    setIsModalOpen(true);
+};
+
+const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedCard(null);
+};
+
+const cardData: CardData = {
+    titre: "WOW",
+    imageUrl: imageUrl,
+    content: "Chokbar",
+    actionText: "voir plus",
+    extraClass: "height-500 width-30"
+};
 
   const [formData, setFormData] = useState({
     text: "",
