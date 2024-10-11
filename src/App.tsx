@@ -12,16 +12,13 @@ import CarouselExample from './components/Carousel/Carousel.example';
 import CheckboxExample from './components/checkbox/Checkbox.example';
 import ToggleExample from './components/toggle/Toggle.example';
 import ButtonExample from './components/Button/Button.example';
+import RadioExample from './components/Radio/Radio.example';
 
 function App() {
   const [values, setValues] = useState<(string | number)[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedCard, setSelectedCard] = useState<CardData | null>(null);
   console.log(values);
-
-  const handleClick = () => {
-    alert("YOOOOOOOOOOOOOOOOOOOO");
-  };
 
   const openModal = (card: CardData) => {
     setSelectedCard(card);
@@ -110,7 +107,7 @@ const cardData: CardData = {
             <Route path="/card" element={<Card />} />
             <Route path="/checkbox" element={<CheckboxExample />} />
             <Route path="/button" element={<ButtonExample />} />
-            {/* <Route path="/input" element={<RadioExample />} /> */}
+            <Route path="/radio" element={<RadioExample />} />
             <Route path="/toggle" element={<ToggleExample />} />
             {/* <Route path="/input" element={<AlertExample />} /> */}
             {/* <Route path="/input" element={<BreadcrumbExample />} /> */}
