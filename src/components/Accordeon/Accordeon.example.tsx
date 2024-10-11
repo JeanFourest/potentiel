@@ -1,4 +1,6 @@
 import Accordeon from './Accordeon';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'; 
+import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 function AccordeonExample() {
     const sections = [
@@ -39,9 +41,9 @@ function AccordeonExample() {
                 </div>
                     
                 <div className="code-example-container">
-                    <pre>
-                        <code>{codeExample}</code>
-                    </pre>
+                    <SyntaxHighlighter language="jsx" style={darcula}>
+                        {codeExample}
+                    </SyntaxHighlighter>
                     <button className="copy-button" onClick={() => navigator.clipboard.writeText(codeExample)}>
                         Copy Code
                     </button>

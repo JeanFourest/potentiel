@@ -1,14 +1,23 @@
 import React from "react";
 import "./Loader.css"; 
 
+/*
+ * Propriétées du composant Loader
+ */
 interface LoaderProps {
   type: "spinner" | "progress-bar";
   progress?: number; 
   className?: string;
 }
 
+/*
+ * Composant Loader
+ */
 const LoaderComponent: React.FC<LoaderProps> = ({ type, progress = 0, className }) => {
 
+    /*
+     * Rendu du composant
+     */
     const dynamicClassName = `${type} ${className || ''}`.trim();
 
     if (type === "spinner") {

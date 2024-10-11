@@ -1,4 +1,6 @@
 import LoaderComponent from "./Loader";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'; 
+import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 
 function LoaderExample() {
@@ -52,9 +54,9 @@ const codeExample2 = `
                 </div>
                
                 <div className="code-example-container">
-                    <pre>
-                        <code>{codeExample1}</code>
-                    </pre>
+                    <SyntaxHighlighter language="jsx" style={darcula}>
+                        {codeExample1}
+                    </SyntaxHighlighter>
                     <button className="copy-button" onClick={() => navigator.clipboard.writeText(codeExample1)}>
                         Copy Code
                     </button>
@@ -71,9 +73,9 @@ const codeExample2 = `
                 </div>
 
                 <div className="code-example-container">
-                    <pre>
-                        <code>{codeExample2}</code>
-                    </pre>
+                    <SyntaxHighlighter language="jsx" style={darcula}>
+                        {codeExample2}
+                    </SyntaxHighlighter>
                     <button className="copy-button" onClick={() => navigator.clipboard.writeText(codeExample2)}>
                         Copy Code
                     </button>
