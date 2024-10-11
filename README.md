@@ -80,7 +80,7 @@ Props du loader :
 
 Props du carousel :
 
-- `slides`: `string[]`: contenu à afficher dans les slides
+- `slides`: `React.RaectNode[]`: contenu à afficher dans les slides
 - `autoplay`: `boolean`: options pour faire défiler automatiquement ou non les slides
 - `interval`: `number`: interval de temps entre le changement de slide (uniquement avec l'autoplay, sinon pas pris en compte)
 - `showArrows`: `boolean`: options pour afficher ou non les flèches de changement de slides

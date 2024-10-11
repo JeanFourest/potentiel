@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './Carousel.css';
 
 interface CarouselProps {
-  slides: string[]; 
+  slides: React.ReactNode[]; 
   autoPlay?: boolean; 
   interval?: number; 
   showArrows?: boolean;
