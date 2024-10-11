@@ -1,5 +1,7 @@
 import { FaBeer } from "react-icons/fa";
 import Button from "./Button";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'; 
+import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 function ButtonExample() {
     const handleClick = () => {
@@ -66,9 +68,9 @@ function ButtonExample() {
         </div>
 
         <div className="code-example-container">
-          <pre>
-            <code>{codeExample1}</code>
-          </pre>
+          <SyntaxHighlighter language="jsx" style={darcula}>
+              {codeExample1}
+          </SyntaxHighlighter>
           <button
             className="copy-button"
             onClick={() => navigator.clipboard.writeText(codeExample1)}
@@ -103,9 +105,9 @@ function ButtonExample() {
         />
         </div>
         <div className="code-example-container">
-          <pre>
-            <code>{codeExample2}</code>
-          </pre>
+          <SyntaxHighlighter language="jsx" style={darcula}>
+              {codeExample2}
+          </SyntaxHighlighter>
           <button
             className="copy-button"
             onClick={() => navigator.clipboard.writeText(codeExample2)}

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Input from "./Input";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'; 
+import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 function InputExample() {
 
@@ -121,9 +123,9 @@ function InputExample() {
         </div>
 
         <div className="code-example-container">
-          <pre>
-            <code>{codeExample}</code>
-          </pre>
+          <SyntaxHighlighter language="jsx" style={darcula}>
+              {codeExample}
+          </SyntaxHighlighter>
           <button
             className="copy-button"
             onClick={() => navigator.clipboard.writeText(codeExample)}

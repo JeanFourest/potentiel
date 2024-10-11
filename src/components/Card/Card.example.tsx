@@ -1,5 +1,7 @@
 import Card from "./Card";
 import imageUrl from '../assets/images/beaugosse.png';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'; 
+import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 
 function CardExample() {
@@ -47,9 +49,9 @@ function CardExample() {
         </div>
 
         <div className="code-example-container">
-          <pre>
-            <code>{codeExample1}</code>
-          </pre>
+          <SyntaxHighlighter language="jsx" style={darcula}>
+              {codeExample1}
+          </SyntaxHighlighter>
           <button
             className="copy-button"
             onClick={() => navigator.clipboard.writeText(codeExample1)}

@@ -1,4 +1,6 @@
 import Checkbox from "./Checkbox";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'; 
+import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 function CheckboxExample() {
   const setValues = (e: any) => {
@@ -13,7 +15,7 @@ function CheckboxExample() {
       { label: "option 2", value: 2, checked: false, checkAll: false },
       { label: "option 3", value: 3, checked: false, checkAll: false },
     ]}
-    onChange=...
+    onChange={...}
     className="checkbox-sm"
   />
     `;
@@ -26,7 +28,7 @@ function CheckboxExample() {
       { label: "option 3", value: 3, checked: false, checkAll: false },
       { label: "option 4", value: 4, checked: false, checkAll: false },
     ]}
-    onChange=...
+    onChange={...}
     className="checkbox-lg"
   />
     `;
@@ -58,9 +60,9 @@ function CheckboxExample() {
         </div>
 
         <div className="code-example-container">
-          <pre>
-            <code>{codeExample1}</code>
-          </pre>
+          <SyntaxHighlighter language="jsx" style={darcula}>
+              {codeExample1}
+          </SyntaxHighlighter>
           <button
             className="copy-button"
             onClick={() => navigator.clipboard.writeText(codeExample1)}
@@ -100,9 +102,9 @@ function CheckboxExample() {
         </div>
 
         <div className="code-example-container">
-          <pre>
-            <code>{codeExample2}</code>
-          </pre>
+          <SyntaxHighlighter language="jsx" style={darcula}>
+              {codeExample2}
+          </SyntaxHighlighter>
           <button
             className="copy-button"
             onClick={() => navigator.clipboard.writeText(codeExample2)}
