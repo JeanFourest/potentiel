@@ -14,6 +14,7 @@ import ToggleExample from './components/toggle/Toggle.example';
 import ButtonExample from './components/Button/Button.example';
 import RadioExample from './components/Radio/Radio.example';
 import CardExample from './components/Card/Card.example';
+import ModalExample from './components/Modal/Modal.example';
 
 function App() {
   const [values, setValues] = useState<(string | number)[]>([]);
@@ -114,7 +115,7 @@ const cardData: CardData = {
             {/* <Route path="/input" element={<BreadcrumbExample />} /> */} 
             {/* <Route path="/input" element={<AccordeonExample />} /> */}
             <Route path="/carousel" element={<CarouselExample />} />
-            {/* <Route path="/input" element={<ModalExample />} /> */}
+            <Route path="/modal" element={<ModalExample />} />
             {/* <Route path="/input" element={<TabsExample />} /> */}
             {/* <Route path="/input" element={<TableauExample />} /> */}
             </Routes>
