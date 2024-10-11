@@ -11,7 +11,7 @@ import Button from "./components/Button/Button";
 import LoaderExample from "./components/Loader/Loader.example";
 import Card from "./components/Card/Card";
 import imageUrl from './components/assets/images/beau gosse.png';
-import Input from './components/Input/Input';
+import InputExample from './components/Input/Input.example';
 import Radio from './components/Radio/Radio'
 import CarouselExample from './components/Carousel/Carousel.example';
 import CheckboxExample from './components/Checkbox/Checkbox.example';
@@ -45,27 +45,6 @@ const cardData: CardData = {
     actionText: "voir plus",
     extraClass: "height-500 width-30"
 };
-
-  const [formData, setFormData] = useState({
-    text: "",
-    email: "",
-    password: "",
-    number: "",
-    date: "",
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value, // Met à jour l'état pour le champ spécifique
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Formulaire soumis:", formData);
-  };
 
   const [isToggled, setIsToggled] = useState(true);
   const handleToggle = () => {
@@ -112,7 +91,7 @@ const cardData: CardData = {
             <Routes>
             <Route path="/select" element={<SelectExample />} />
             <Route path="/loader" element={<LoaderExample />} />
-            <Route path="/card" element={<Card />} />
+            <Route path="/input" element={<InputExample />} />
             <Route path="/checkbox" element={<CheckboxExample />} />
             {/* <Route path="/button" element={<ButtonExample />} /> */}
             {/* <Route path="/input" element={<RadioExample />} /> */}
