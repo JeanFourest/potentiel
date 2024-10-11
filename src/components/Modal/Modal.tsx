@@ -15,13 +15,15 @@ const Modal: React.FC<ModalProps> = ({ isOpen, title, content, imgUrl, onClose }
     return (
         <div className="modal-overlay">
             <div className="modal">
-                <div className="modal-header">
-                    <img src={imgUrl} className='modal-img'/>
+                <div className='modal-fit'>
                     <button className="close-button" onClick={onClose}>×</button>
-                </div>
-                <div className="modal-content">
-                    <h2>{title}</h2>
-                    <p>{content}</p>
+                    <div className="modal-header">
+                        <img src={imgUrl} className='modal-img'/>
+                    </div>
+                    <div className="modal-content">
+                        <h2>{title}</h2>
+                        <p>{content}</p>
+                    </div>
                 </div>
             </div>
         </div>
