@@ -74,3 +74,17 @@ Props du loader :
 - `type`: `spinner ou progress-bar`: choix du loader
 - `progress`: `number`: nombre pour la progression de la barre de progression
 - `className`: `string`: ajouter autant de classes que souhaitées 
+
+
+## Carousel
+
+Props du carousel :
+
+- `slides`: `string[]`: contenu à afficher dans les slides
+- `autoplay`: `boolean`: options pour faire défiler automatiquement ou non les slides
+- `interval`: `number`: interval de temps entre le changement de slide (uniquement avec l'autoplay, sinon pas pris en compte)
+- `showArrows`: `boolean`: options pour afficher ou non les flèches de changement de slides
+- `showPagination`: `boolean`: option pour afficher ou non la pagination pour défiler les slides
+- `className`: `string`: ajouter autant de classes que souhaitées
+- `width`: `string`: définir la largeur du carousel
+- `height`: `string`: définir la hauteur du carousel
