@@ -54,14 +54,32 @@ const [group, setGroup] = useState([
 - `onChange`: retourne un tableau contenant les valeurs des checkbox cochés
 - `className`: vou pouvez ajouter une classe css => checkbox(default), checkbox-sm ou checkbox-lg
 
-## Select 
+## Toggle
 
-Props du select : 
+Props du toggle:
+
+- `rounded`: boolean (défaut: false) permet d'arrondir les coins du toggle
+- `isToggled`: boolean (défaut: false) permet de définir si le toggle est activé ou non
+- `onToggle`: fonction qui retourne un boolean (true si le toggle est activé, false sinon)
+- `className`: string (défaut: 'switch-sm') permet d'ajouter une classe css
+
+```javascript
+<Toggle
+  rounded={true}
+  onToggle={() => handleToggle()}
+  isToggled={isToggled}
+  className="switch-md"
+/>
+```
+
+## Select
+
+Props du select :
 
 - `options` : prend deux valeurs :
   - `value`: `string ou number`: la valeur de l'option
   - `label`: `string`: texte descriptif de l'option
-- `className`: `string`: ajouter autant de classes que souhaitées 
+- `className`: `string`: ajouter autant de classes que souhaitées
 - `multiple`: `boolean`: permettre de choisir plusieurs options
 - `size`: `number ou never`: nombre d'options visible dans un select. À ajouter ou non pour un select multiple, inutile pour un select non multiple
 - `disabled`: `boolean`: activer ou désactiver l'utilisation du select
@@ -69,8 +87,23 @@ Props du select :
 
 ## Loader
 
-Props du loader : 
+Props du loader :
 
 - `type`: `spinner ou progress-bar`: choix du loader
 - `progress`: `number`: nombre pour la progression de la barre de progression
 - `className`: `string`: ajouter autant de classes que souhaitées 
+
+
+## Carousel
+
+Props du carousel :
+
+- `slides`: `React.RaectNode[]`: contenu à afficher dans les slides
+- `autoplay`: `boolean`: options pour faire défiler automatiquement ou non les slides
+- `interval`: `number`: interval de temps entre le changement de slide (uniquement avec l'autoplay, sinon pas pris en compte)
+- `showArrows`: `boolean`: options pour afficher ou non les flèches de changement de slides
+- `showPagination`: `boolean`: option pour afficher ou non la pagination pour défiler les slides
+- `className`: `string`: ajouter autant de classes que souhaitées
+- `width`: `string`: définir la largeur du carousel
+- `height`: `string`: définir la hauteur du carousel
+- `className`: `string`: ajouter autant de classes que souhaitées
