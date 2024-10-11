@@ -14,6 +14,8 @@ import imageUrl from './components/assets/images/beau gosse.png';
 import Input from './components/Input/Input';
 import Radio from './components/Radio/Radio'
 import CarouselExample from './components/Carousel/Carousel.example';
+import CheckboxExample from './components/checkbox/Checkbox.example';
+import ToggleExample from './components/Toggle/Toggle.example';
 
 function App() {
   const [values, setValues] = useState<(string | number)[]>([]);
@@ -24,11 +26,11 @@ function App() {
   };
 
   const [formData, setFormData] = useState({
-    text: '',
-    email: '',
-    password: '',
-    number: '',
-    date: '',
+    text: "",
+    email: "",
+    password: "",
+    number: "",
+    date: "",
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -41,9 +43,13 @@ function App() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Formulaire soumis:', formData);
+    console.log("Formulaire soumis:", formData);
   };
 
+  const [isToggled, setIsToggled] = useState(true);
+  const handleToggle = () => {
+    setIsToggled(!isToggled);
+  };
   return (
     <Router>
       <div className="app-container">
@@ -82,23 +88,23 @@ function App() {
         </nav>
 
         <main className="main-content">
-          <Routes>
+            <Routes>
             <Route path="/select" element={<SelectExample />} />
             <Route path="/loader" element={<LoaderExample />} />
             <Route path="/card" element={<Card />} />
-            {/* <Route path="/checkbox" element={<CheckboxExample />} />
-            <Route path="/button" element={<ButtonExample />} />
-            <Route path="/input" element={<RadioExample />} />
-            <Route path="/input" element={<ToggleExample />} />
-            <Route path="/input" element={<AlertExample />} />
-            <Route path="/input" element={<BreadcrumbExample />} />
-            <Route path="/input" element={<CardExample />} />
-            <Route path="/input" element={<AccordeonExample />} /> */}
+            <Route path="/checkbox" element={<CheckboxExample />} />
+            {/* <Route path="/button" element={<ButtonExample />} /> */}
+            {/* <Route path="/input" element={<RadioExample />} /> */}
+            <Route path="/toggle" element={<ToggleExample />} />
+            {/* <Route path="/input" element={<AlertExample />} /> */}
+            {/* <Route path="/input" element={<BreadcrumbExample />} /> */}
+            {/* <Route path="/input" element={<CardExample />} /> */}
+            {/* <Route path="/input" element={<AccordeonExample />} /> */}
             <Route path="/carousel" element={<CarouselExample />} />
-            {/* <Route path="/input" element={<ModalExample />} />
-            <Route path="/input" element={<TabsExample />} />
-            <Route path="/input" element={<TableauExample />} /> */}
-          </Routes>
+            {/* <Route path="/input" element={<ModalExample />} /> */}
+            {/* <Route path="/input" element={<TabsExample />} /> */}
+            {/* <Route path="/input" element={<TableauExample />} /> */}
+            </Routes>
         </main>
       </div>
     </Router>
