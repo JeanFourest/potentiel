@@ -225,3 +225,37 @@ Props du carousel :
   <Alert className="alert-error">this is an error alert</Alert>
   <Alert className="alert-success">this is a success alert</Alert>
 ```
+
+## Tableau
+
+## Tableau
+
+Props du tableau :
+
+- `data`: `[]`tableau de données à afficher.
+- `columns`: `[]`: tableau d'objets définissant les colonnes du tableau. Chaque colonne a un header (nom de la colonne) et un accessor (clé correspondant aux données).
+- `selectable`: `boolean` (optionnel, défaut: `false`): permet de sélectionner les lignes avec des cases à cocher.
+- `pagination`: `boolean` (optionnel, défaut: `true`): permet d'activer ou désactiver la pagination.
+- `rowsPerPage`: `number` (optionnel, défaut: `5`): nombre de lignes à afficher par page (si la pagination est activée).
+
+```javascript
+const data = [
+  { id: 1, name: 'John Doe', age: 28 },
+  { id: 2, name: 'Jane Smith', age: 34 },
+  { id: 3, name: 'Sam Green', age: 45 },
+];
+
+const columns = [
+  { header: 'ID', accessor: 'id' },
+  { header: 'Nom', accessor: 'name' },
+  { header: 'Âge', accessor: 'age' },
+];
+
+<Tableau
+  data={data}
+  columns={columns}
+  selectable={true}
+  pagination={true}
+  rowsPerPage={5}
+/>
+```
