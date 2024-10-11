@@ -126,7 +126,7 @@ Props du loader :
 
 - `type`: `spinner ou progress-bar`: choix du loader
 - `progress`: `number`: nombre pour la progression de la barre de progression
-- `className`: `string`: ajouter autant de classes que souhaitées 
+- `className`: `string`: ajouter autant de classes que souhaitées
 
 ```javascript
 {/* Loader Spinner*/}
@@ -156,7 +156,7 @@ Props du carousel :
 
 ```javascript
 <Carousel
-  slides={['Texte 1', 'Texte 2', 'Texte 3']}
+  slides={["Texte 1", "Texte 2", "Texte 3"]}
   autoPlay={true}
   interval={3000}
   showArrows={true}
@@ -169,7 +169,7 @@ Props du carousel :
 
 ## Acccordeon
 
-- `section`: prends deux valeurs : 
+- `section`: prends deux valeurs :
   - `title`: `string`: ajouter un titre pour le parent
   - `content`: `string ou React.ReactNode[]`: ajouter un ou plusieurs contenu comme enfant.s au parent
 - `className`: `string`: ajouter autant de classes que souhaitées
@@ -189,4 +189,18 @@ Props du carousel :
     { title: 'Section 3', content: 'Contenu 3.1' },
   ];
 />
+```
+
+## Alert
+
+- `className`: `string`: ajouter autant de classes que souhaitées (alert-information, alert-warning, alert-error, alert-success)
+- `children`: `React.ReactNode`: contenu à afficher dans l'alert
+- `automaticClose` : `boolean`: permet de fermer automatiquement l'alert
+- `closeAfterMs` : `number`: temps en millisecondes avant de fermer l'alert
+
+```javascript
+  <Alert className="alert-information">This is a success alert</Alert>
+  <Alert className="alert-warning">this is a warning alert</Alert>
+  <Alert className="alert-error">this is an error alert</Alert>
+  <Alert className="alert-success">this is a success alert</Alert>
 ```

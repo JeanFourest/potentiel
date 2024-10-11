@@ -6,18 +6,20 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 import SelectExample from './components/Select/Select.example';
 import LoaderExample from "./components/Loader/Loader.example";
+
 import Card from "./components/Card/Card";
 import imageUrl from './components/assets/images/beau gosse.png';
 import InputExample from './components/Input/Input.example';
 import Radio from './components/Radio/Radio'
 import CarouselExample from './components/Carousel/Carousel.example';
-import CheckboxExample from './components/checkbox/Checkbox.example';
-import ToggleExample from './components/toggle/Toggle.example';
+import AlertExample from './components/Alert/Alert.example';
 import ButtonExample from './components/Button/Button.example';
 import RadioExample from './components/Radio/Radio.example';
 import CardExample from './components/Card/Card.example';
 import ModalExample from './components/Modal/Modal.example';
 import AccordeonExample from './components/Accordeon/Accordeon.example';
+import CheckboxExample from './components/Checkbox/Checkbox.example';
+import ToggleExample from './components/Toggle/Toggle.example';
 
 function App() {
   const [values, setValues] = useState<(string | number)[]>([]);
@@ -94,7 +96,7 @@ const cardData: CardData = {
             <Route path="/button" element={<ButtonExample />} />
             <Route path="/radio" element={<RadioExample />} />
             <Route path="/toggle" element={<ToggleExample />} />
-            {/* <Route path="/input" element={<AlertExample />} /> */}
+            <Route path="/alert" element={<AlertExample />} />
             {/* <Route path="/input" element={<BreadcrumbExample />} /> */}
             <Route path="/accordeon" element={<AccordeonExample />} /> 
             <Route path="/carousel" element={<CarouselExample />} />
