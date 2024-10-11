@@ -5,14 +5,15 @@ import { useState } from "react";
 import { FaBeer } from "react-icons/fa";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
-import SelectExample from "./components/Select/Select.example";
-import Checkbox from "./components/checkbox/Checkbox";
+import SelectExample from './components/Select/Select.example';
+import Checkbox from "./components/Checkbox/Checkbox";
 import Button from "./components/Button/Button";
-import LoaderExample from "./components/Loader/loader.example";
+import LoaderExample from "./components/Loader/Loader.example";
 import Card from "./components/Card/Card";
 import imageUrl from './components/assets/images/beau gosse.png';
 import Input from './components/Input/Input';
 import Radio from './components/Radio/Radio'
+import CarouselExample from './components/Carousel/Carousel.example';
 import CheckboxExample from './components/checkbox/Checkbox.example';
 import ToggleExample from './components/Toggle/Toggle.example';
 
@@ -99,7 +100,7 @@ function App() {
             {/* <Route path="/input" element={<BreadcrumbExample />} /> */}
             {/* <Route path="/input" element={<CardExample />} /> */}
             {/* <Route path="/input" element={<AccordeonExample />} /> */}
-            {/* <Route path="/input" element={<CaroouselExample />} /> */}
+            <Route path="/carousel" element={<CarouselExample />} />
             {/* <Route path="/input" element={<ModalExample />} /> */}
             {/* <Route path="/input" element={<TabsExample />} /> */}
             {/* <Route path="/input" element={<TableauExample />} /> */}
