@@ -3,61 +3,36 @@ import LoaderComponent from "./Loader";
 
 function LoaderExample() {
 
-    const codeExample1 = `<div className="spinner-circle">
-    <div className=spinner></div>
-</div>
+    const codeExample1 = `
+    <LoaderComponent type="spinner" />
 
-<div className="spinner-circle">
-    <div className=spinner spinner-primary></div>
-</div>
+    <LoaderComponent type="spinner" className="spinner-primary" />
 
-<div className="spinner-circle">
-    <div className=spinner spinner-secondary></div>
-</div>
+    <LoaderComponent type="spinner" className="spinner-secondary" />
 
-<div className="spinner-circle">
-    <div className=spinner spinner-success></div>
-</div>
+    <LoaderComponent type="spinner" className="spinner-success" />
 
-<div className="spinner-circle">
-    <div className=spinner spinner-danger></div>
-</div>
+    <LoaderComponent type="spinner" className="spinner-danger" />
+    
+    <LoaderComponent type="spinner" className="spinner-warning" />
 
-<div className="spinner-circle">
-    <div className=spinner spinner-warning></div>
-</div>
+    <LoaderComponent type="spinner" className="spinner-info" />
 
-<div className="spinner-circle">
-    <div className=spinner spinner-info></div>
-</div>
+    <LoaderComponent type="spinner" className="spinner-light" />
 
-<div className="spinner-circle">
-    <div className=spinner spinner-light></div>
-</div>
+    <LoaderComponent type="spinner" className="spinner-dark" />
+    `
 
-<div className="spinner-circle">
-    <div className=spinner spinner-dark></div>
-</div>`
+const codeExample2 = `
+    <LoaderComponent type="progress-bar" progress="50" />
 
-const codeExample2 = `<div className="progress-bar" style=width: 50%>
-    50%
-</div>
+    <LoaderComponent type="progress-bar" className="progress-bar-success" progress="25" />
 
-<div className="progress-bar progress-bar-success" style=width: 25%>
-    25%
-</div>
+    <LoaderComponent type="progress-bar" className="progress-bar-info" progress="50" />
 
-<div className="progress-bar progress-bar-info" style=width: 50%>
-    50%
-</div>
+    <LoaderComponent type="progress-bar" className="progress-bar-warning" progress="75" />
 
-<div className="progress-bar progress-bar-warning" style=width: 75%>
-    75%
-</div>
-
-<div className="progress-bar progress-bar-danger" style=width: 100%>
-    100%
-</div>
+    <LoaderComponent type="progress-bar" className="progress-bar-danger" progress="100" />  
 `
 
 

@@ -85,6 +85,25 @@ Props du select :
 - `disabled`: `boolean`: activer ou désactiver l'utilisation du select
 - `onChange`: `string ou string[]`: enregister les intéractions utilisateurs et effectuer des actions spécifiques
 
+```javascript
+<SelectComponent
+    options={[
+        { value: '0', label: 'Choisis une option' },
+        { value: '1', label: 'Option 1' },
+        { value: '2', label: 'Option 2' },
+        { value: '3', label: 'Option 3' },
+        { value: '4', label: 'Option 4' },
+        { value: '5', label: 'Option 5' },
+        { value: '6', label: 'Option 6' }
+    ]}
+    className='select-lg'
+    disabled={false}
+    multiple={true}
+    size={4}
+    onChange={...}
+/>
+```
+
 ## Loader
 
 Props du loader :
@@ -93,6 +112,17 @@ Props du loader :
 - `progress`: `number`: nombre pour la progression de la barre de progression
 - `className`: `string`: ajouter autant de classes que souhaitées 
 
+```javascript
+{/* Loader Spinner*/}
+<LoaderComponent type="spinner" />
+<LoaderComponent type="spinner" className="spinner-primary" />
+<LoaderComponent type="spinner" className="spinner-secondary" />
+
+{/* Loader Progress Bar */}
+<LoaderComponent type="progress-bar" className="progress-bar-success" progress="25" />
+<LoaderComponent type="progress-bar" className="progress-bar-info" progress="50" />
+<LoaderComponent type="progress-bar" className="progress-bar-warning" progress="75" />
+```
 
 ## Carousel
 
@@ -107,3 +137,40 @@ Props du carousel :
 - `width`: `string`: définir la largeur du carousel
 - `height`: `string`: définir la hauteur du carousel
 - `className`: `string`: ajouter autant de classes que souhaitées
+
+```javascript
+<Carousel
+  slides={['Texte 1', 'Texte 2', 'Texte 3']}
+  autoPlay={true}
+  interval={3000}
+  showArrows={true}
+  showPagination={false}
+  className="custom-carousel"
+  width="800px"
+  height="500px"
+/>
+```
+
+## Acccordeon
+
+- `section`: prends deux valeurs : 
+  - `title`: `string`: ajouter un titre pour le parent
+  - `content`: `string ou React.ReactNode[]`: ajouter un ou plusieurs contenu comme enfant.s au parent
+- `className`: `string`: ajouter autant de classes que souhaitées
+
+```javascript
+<Accordeon
+  sections = [
+    { title: 'Section 1', content: ['Contenu 1.1', 'Contenu 1.2', 'Contenu 1.3'] },
+    {
+      title: 'Section 2',
+      content: [
+        <p key="1">Paragraphe 2.1</p>,
+        <p key="2">Paragraphe 2.2</p>,
+        <img key="3" src="https://via.placeholder.com/150" alt="Image 2.3" />
+      ],
+    },
+    { title: 'Section 3', content: 'Contenu 3.1' },
+  ];
+/>
+```

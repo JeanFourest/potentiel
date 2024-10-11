@@ -5,7 +5,9 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
-    "types": ["node", "jest", "jest-dom"]
+    "types": ["node", "jest", "jest-dom"],
+    "jsx": "react-jsx",
+    "esModuleInterop": true
   },
   "exclude": ["node_modules", "dist"]
 }
