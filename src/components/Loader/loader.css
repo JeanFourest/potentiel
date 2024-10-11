@@ -1,0 +1,97 @@
+.spinner-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color : #000000;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 3px 0 3px;
+  }
+
+  .spinner-sm {
+    width: 20px;
+    height: 20px;
+  }
+
+  .spinner-lg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .spinner-primary {
+    border-left-color:#0d6efd !important;
+  }
+
+  .spinner-secondary {
+    border-left-color: #6c757d !important;
+  }
+
+  .spinner-success {
+    border-left-color: #198754 !important;
+  }
+
+  .spinner-danger {
+    border-left-color: #dc3545 !important;
+  }
+
+  .spinner-warning {
+    border-left-color: #ffc107 !important;
+  }
+
+  .spinner-info {
+    border-left-color: #0dcaf0 !important;
+  }
+
+  .spinner-light {
+    border-left-color: #f8f9fa !important;
+  }
+
+  .spinner-dark {
+    border-left-color: #212529 !important;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .progress-bar-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    border-radius: 4px;
+    height: 20px;
+    background-color: #0d6efd;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    margin: 6px;
+  }
+  
+  .progress-bar-success {
+    background-color: #198754 !important;
+  }
+
+  .progress-bar-info {
+    background-color: #0dcaf0 !important;
+  }
+
+  .progress-bar-warning {
+    background-color: #ffc107 !important;
+  }
+
+  .progress-bar-danger {
+    background-color: #dc3545 !important;
+  }
+  
