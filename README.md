@@ -1,13 +1,13 @@
 # Explication d'utilisation des components
 
-## Input 
+## Input
 
 Props de l'input :
 
 - `label`: `string`: nom du label de l'input
-- `type`: `text, email, password, number ou date`: type que l'input doit supporter 
+- `type`: `text, email, password, number ou date`: type que l'input doit supporter
 - `value`: `string`: valeur de l'input
-- `onchange`: `React.ChangeEvent`: 
+- `onchange`: `React.ChangeEvent`:
 - `required`: `boolean`: obligaiton ou non de remplir l'input
 - `minLength`: `number`: longueur minimum de caractères minimum
 - `maxLength`: `number`: longueur maximum de caractère
@@ -43,7 +43,7 @@ Props du button:
 - `disabled?: boolean`: props permettant de activer ou désactiver l'utilisation du button
 
 ```javascript
-<Button 
+<Button
     text="ok"
     onClick={...}
     extraClass="danger"
@@ -228,8 +228,6 @@ Props du carousel :
 
 ## Tableau
 
-## Tableau
-
 Props du tableau :
 
 - `data`: `[]`tableau de données à afficher.
@@ -240,15 +238,15 @@ Props du tableau :
 
 ```javascript
 const data = [
-  { id: 1, name: 'John Doe', age: 28 },
-  { id: 2, name: 'Jane Smith', age: 34 },
-  { id: 3, name: 'Sam Green', age: 45 },
+  { id: 1, name: "John Doe", age: 28 },
+  { id: 2, name: "Jane Smith", age: 34 },
+  { id: 3, name: "Sam Green", age: 45 },
 ];
 
 const columns = [
-  { header: 'ID', accessor: 'id' },
-  { header: 'Nom', accessor: 'name' },
-  { header: 'Âge', accessor: 'age' },
+  { header: "ID", accessor: "id" },
+  { header: "Nom", accessor: "name" },
+  { header: "Âge", accessor: "age" },
 ];
 
 <Tableau
@@ -257,5 +255,5 @@ const columns = [
   selectable={true}
   pagination={true}
   rowsPerPage={5}
-/>
+/>;
 ```
