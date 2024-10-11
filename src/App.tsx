@@ -2,32 +2,26 @@ import './App.css';
 import './components/assets/styleGeneral.css';
 
 import { useState } from "react";
-import { FaBeer } from "react-icons/fa";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 import SelectExample from './components/Select/Select.example';
-import Checkbox from "./components/Checkbox/Checkbox";
-import Button from "./components/Button/Button";
 import LoaderExample from "./components/Loader/Loader.example";
-import Card from "./components/Card/Card";
-import imageUrl from './components/assets/images/beau gosse.png';
-import Input from './components/Input/Input';
-import Radio from './components/Radio/Radio'
+import imageUrl from './components/assets/images/beaugosse.png';
 import CarouselExample from './components/Carousel/Carousel.example';
+import AlertExample from './components/Alert/Alert.example';
+import ButtonExample from './components/Button/Button.example';
+import RadioExample from './components/Radio/Radio.example';
+import CardExample from './components/Card/Card.example';
+import ModalExample from './components/Modal/Modal.example';
+import AccordeonExample from './components/Accordeon/Accordeon.example';
 import CheckboxExample from './components/Checkbox/Checkbox.example';
 import ToggleExample from './components/Toggle/Toggle.example';
-import AlertExample from './components/Alert/Alert.example';
-import AccordeonExample from './components/Accordeon/Accordeon.example';
 
 function App() {
   const [values, setValues] = useState<(string | number)[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedCard, setSelectedCard] = useState<CardData | null>(null);
   console.log(values);
-
-  const handleClick = () => {
-    alert("YOOOOOOOOOOOOOOOOOOOO");
-  };
 
   const openModal = (card: CardData) => {
     setSelectedCard(card);
@@ -113,23 +107,24 @@ const cardData: CardData = {
             <Routes>
             <Route path="/select" element={<SelectExample />} />
             <Route path="/loader" element={<LoaderExample />} />
-            <Route path="/card" element={<Card />} />
+            <Route path="/card" element={<CardExample />} />
             <Route path="/checkbox" element={<CheckboxExample />} />
-            {/* <Route path="/button" element={<ButtonExample />} /> */}
-            {/* <Route path="/input" element={<RadioExample />} /> */}
+            <Route path="/button" element={<ButtonExample />} />
+            <Route path="/radio" element={<RadioExample />} />
             <Route path="/toggle" element={<ToggleExample />} />
             <Route path="/alert" element={<AlertExample />} />
             {/* <Route path="/input" element={<BreadcrumbExample />} /> */}
             {/* <Route path="/input" element={<CardExample />} /> */}
             <Route path="/accordeon" element={<AccordeonExample />} /> 
             <Route path="/carousel" element={<CarouselExample />} />
-            {/* <Route path="/input" element={<ModalExample />} /> */}
+            <Route path="/modal" element={<ModalExample />} />
             {/* <Route path="/input" element={<TabsExample />} /> */}
             {/* <Route path="/input" element={<TableauExample />} /> */}
             </Routes>
         </main>
       </div>
     </Router>
+    
   );
 
   // return (
@@ -162,10 +157,10 @@ const cardData: CardData = {
   //     <Button text="ok" onClick={handleClick} extraClass="danger fullWidth" disabled={true}/>
   //     <Button icon={<FaBeer />} text="bière" onClick={handleClick} extraClass="success right" disabled={false} />
 
-  //     <div className='width'>
-  //       <Card titre="WOW" imageUrl={imageUrl} description='Chokbar' actionText='voir plus' extraClass="height-500 width-30" onActionClick={handleClick} />
-  //       <Card titre="WOW" imageUrl={imageUrl} description='Chokbar' actionText='voir plus' extraClass="height-500 width-50" onActionClick={handleClick} />
-  //     </div>
+      // <div className='width'>
+      //   <Card titre="WOW" imageUrl={imageUrl} description='Chokbar' actionText='voir plus' extraClass="height-500 width-30" onActionClick={handleClick} />
+      //   <Card titre="WOW" imageUrl={imageUrl} description='Chokbar' actionText='voir plus' extraClass="height-500 width-50" onActionClick={handleClick} />
+      // </div>
 
   //     <form onSubmit={handleSubmit}>
   //     <Input

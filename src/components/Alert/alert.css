@@ -2,50 +2,65 @@
   background-color: #f1f8ff;
   color: #0056b3;
   padding: 20px;
-  width: fit-content;
   min-width: 20%;
+  height: fit-content;
   display: flex;
   align-items: center;
   border-radius: 5px;
   margin: 5px;
   border: 1px solid #0056b3;
+  justify-content: space-between;
 }
 
 .alert-warning {
   background-color: #fff4e5;
   color: #a77837;
   padding: 20px;
-  width: fit-content;
+  min-width: 20%;
+  height: fit-content;
   min-width: 20%;
   display: flex;
   align-items: center;
   border-radius: 5px;
   margin: 5px;
   border: 1px solid #a77837;
+  justify-content: space-between;
 }
 
 .alert-error {
   background-color: #fff5f5;
   color: #dc3545;
   padding: 20px;
-  width: fit-content;
+  min-width: 20%;
+  height: fit-content;
   min-width: 20%;
   display: flex;
   align-items: center;
   border-radius: 5px;
   margin: 5px;
   border: 1px solid #dc3545;
+  justify-content: space-between;
 }
 
 .alert-success {
   background-color: #f0fff4;
   color: #198754;
   padding: 20px;
-  width: fit-content;
+  min-width: 20%;
+  height: fit-content;
   min-width: 20%;
   display: flex;
   align-items: center;
   border-radius: 5px;
   margin: 5px;
   border: 1px solid #198754;
+  justify-content: space-between;
+}
+
+.alert-child {
+  margin-right: 10px;
+}
+
+.alert-close {
+  cursor: pointer;
 }
