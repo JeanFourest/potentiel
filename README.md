@@ -1,5 +1,21 @@
 # Explication d'utilisation des components
 
+## Input 
+
+Props de l'input :
+
+- `label`: `string`: nom du label de l'input
+- `type`: `text, email, password, number ou date`: type que l'input doit supporter 
+- `value`: `string`: valeur de l'input
+- `onchange`: `React.ChangeEvent`: 
+- `required`: `boolean`: obligaiton ou non de remplir l'input
+- `minLength`: `number`: longueur minimum de caractères minimum
+- `maxLength`: `number`: longueur maximum de caractère
+- `disabled`: `boolean`: activé ou désactiver l'input
+- `readOnly`: `boolean`: seulement pouvoir lire ou non l'input
+- `placeholder`: `string`: placeholder de l'input
+- `name`: `string`: nom de l'input
+
 ## Button
 
 Props du button:
