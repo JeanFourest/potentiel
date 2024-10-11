@@ -14,6 +14,7 @@ import AccordeonExample from './components/Accordeon/Accordeon.example';
 import CheckboxExample from './components/checkbox/Checkbox.example';
 import ToggleExample from './components/toggle/Toggle.example';
 import AlertExample from './components/Alert/Alert.example';
+import TableauExample from './components/Tableau/Tableau.example';
 
 function App() {
 
@@ -73,7 +74,7 @@ function App() {
               <Route path="/carousel" element={<CarouselExample />} />
               <Route path="/modal" element={<ModalExample />} />
               {/* <Route path="/input" element={<TabsExample />} /> */}
-              {/* <Route path="/input" element={<TableauExample />} /> */}
+              <Route path="/tableau" element={<TableauExample />} />
             </Routes>
         </main>
       </div>
