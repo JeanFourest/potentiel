@@ -1,4 +1,6 @@
-import SelectComponent from './Select'; 
+import SelectComponent from './Select';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'; 
+import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 function SelectExample() {
 
@@ -76,9 +78,9 @@ function SelectExample() {
             />
 
             <div className="code-example-container">
-                <pre>
-                    <code>{codeExample1}</code>
-                </pre>
+                <SyntaxHighlighter language="jsx" style={darcula}>
+                    {codeExample1}
+                </SyntaxHighlighter>
                 <button className="copy-button" onClick={() => navigator.clipboard.writeText(codeExample1)}>
                     Copy Code
                 </button>
@@ -100,9 +102,9 @@ function SelectExample() {
             />
 
             <div className="code-example-container">
-                <pre>
-                    <code>{codeExample2}</code>
-                </pre>
+                <SyntaxHighlighter language="jsx" style={darcula}>
+                    {codeExample2}
+                </SyntaxHighlighter>
                 <button className="copy-button" onClick={() => navigator.clipboard.writeText(codeExample2)}>
                     Copy Code
                 </button>
@@ -124,9 +126,9 @@ function SelectExample() {
             />
 
             <div className="code-example-container">
-                <pre>
-                    <code>{codeExample3}</code>
-                </pre>
+                <SyntaxHighlighter language="jsx" style={darcula}>
+                {codeExample3}
+                </SyntaxHighlighter>
                 <button className="copy-button" onClick={() => navigator.clipboard.writeText(codeExample3)}>
                     Copy Code
                 </button>

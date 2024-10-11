@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import "./Checkbox.css";
 
+/*
+ * Propriétées du composant Checkbox
+ */
 type Checkbox = {
   label: string;
   value: string | number;
@@ -14,12 +17,23 @@ type CheckboxProps = {
   className?: string;
 };
 
+/*
+ * Composant Checkbox
+ */
 function Checkbox({
   group,
   onChange,
   className = "checkbox",
 }: CheckboxProps) {
+
+  /*
+  * Etat du composant
+  */
   const [checkboxes, setCheckboxes] = useState(group);
+
+  /*
+  * Fonction pour gérer le changement de valeur
+  */
   const handleChange = (index: number) => {
     // set the new group of checkboxes
     const newGroup = [...checkboxes];
@@ -69,6 +83,9 @@ function Checkbox({
     onChange(values);
   };
 
+  /*
+  * Vérification des propriétées du composant
+  */
   useEffect(() => {
     const groupAllChecked = group.filter((checkbox) => checkbox.checkAll);
     if (groupAllChecked.length > 1) {
@@ -76,6 +93,9 @@ function Checkbox({
     }
   }, [group]);
 
+  /*
+  * Rendu du composant
+  */
   return (
     <div className={className}>
       {checkboxes.map((checkbox, index) =>

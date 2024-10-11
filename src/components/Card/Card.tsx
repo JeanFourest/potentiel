@@ -2,6 +2,9 @@ import React from 'react';
 import './card.css';
 import Button from '../Button/Button';
 
+/*
+ * Propriétées du composant Card
+ */
 interface CardProps {
     titre?: string;
     imageUrl?: string;
@@ -11,7 +14,14 @@ interface CardProps {
     onActionClick?: () => void;
 }
 
+/*
+ * Composant Card
+ */
 const Card: React.FC<CardProps> = ({ titre, imageUrl, description, actionText, extraClass, onActionClick }) => {
+
+    /*
+     * Rendu du composant
+     */
     return (
         <div className={`card ${extraClass}`}>
             <img src={imageUrl} alt="Card Image" className="card-image" />

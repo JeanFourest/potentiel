@@ -1,5 +1,6 @@
-import React from 'react';
 import Carousel from './Carousel';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'; 
+import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 function CarouselExample() {
   const slides1 = ['Slide 1', 'Slide 2', 'Slide 3', 'Slide 4', 'Slide 5'];
@@ -59,9 +60,9 @@ function CarouselExample() {
         </div>
 
         <div className="code-example-container">
-          <pre>
-            <code>{codeExample1}</code>
-          </pre>
+            <SyntaxHighlighter language="jsx" style={darcula}>
+              {codeExample1}
+          </SyntaxHighlighter>
           <button className="copy-button" onClick={() => navigator.clipboard.writeText(codeExample1)}>
             Copy Code
           </button>
@@ -82,9 +83,9 @@ function CarouselExample() {
         </div>
 
         <div className="code-example-container">
-          <pre>
-            <code>{codeExample2}</code>
-          </pre>
+            <SyntaxHighlighter language="jsx" style={darcula}>
+              {codeExample2}
+          </SyntaxHighlighter>
           <button className="copy-button" onClick={() => navigator.clipboard.writeText(codeExample2)}>
             Copy Code
           </button>
@@ -106,9 +107,9 @@ function CarouselExample() {
         </div>
 
         <div className="code-example-container">
-          <pre>
-            <code>{codeExample3}</code>
-          </pre>
+            <SyntaxHighlighter language="jsx" style={darcula}>
+              {codeExample3}
+          </SyntaxHighlighter>
           <button className="copy-button" onClick={() => navigator.clipboard.writeText(codeExample3)}>
             Copy Code
           </button>

@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Toggle from "./Toggle";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'; 
+import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 function ToggleExample() {
   const [values, setValues] = useState(false);
@@ -16,17 +18,17 @@ function ToggleExample() {
 
   const codeExample1 = `
     <Toggle
-      isToggled=false
-      rounded=true
+      isToggled={false}
+      rounded={true}
       className="switch-lg"
-      onToggle=...
+      onToggle={...}
     />
     
     <Toggle
-      isToggled=false
-      rounded=false
+      isToggled={false}
+      rounded={false}
       className="switch-sm"
-      onToggle=...
+      onToggle={...}
     />
   `;
 
@@ -49,9 +51,9 @@ function ToggleExample() {
         </div>
 
         <div className="code-example-container">
-          <pre>
-            <code>{codeExample1}</code>
-          </pre>
+          <SyntaxHighlighter language="jsx" style={darcula}>
+              {codeExample1}
+          </SyntaxHighlighter>
           <button
             className="copy-button"
             onClick={() => navigator.clipboard.writeText(codeExample1)}
