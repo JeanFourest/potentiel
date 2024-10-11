@@ -1,28 +1,42 @@
 import React, { useState } from 'react';
 import './accordeon.css';
 
+/*
+ * Propriétées d'une section du composant Accordeon
+ */
 interface AccordeonSection {
   title: string;
   content: string | React.ReactNode[];
 }
 
+/*
+ * Propriétées du composant Accordeon
+ */
 interface AccordeonProps {
   sections: AccordeonSection[];
   className?: string;
 }
 
+/*
+ * Composant Accordeon
+ */
 const Accordeon: React.FC<AccordeonProps> = ({ sections, className }) => {
   const [activeSections, setActiveSections] = useState<number[]>([]);
 
-  // Fonction pour ouvrir/fermer une section
-  const toggleSection = (index: number) => {
-    setActiveSections((prevActiveSections) =>
-      prevActiveSections.includes(index)
-        ? prevActiveSections.filter((i) => i !== index)
-        : [...prevActiveSections, index]
-    );
-  };
+    /*
+    * Fonction pour ouvrir ou fermer une section 
+    */
+    const toggleSection = (index: number) => {
+        setActiveSections((prevActiveSections) =>
+        prevActiveSections.includes(index)
+            ? prevActiveSections.filter((i) => i !== index)
+            : [...prevActiveSections, index]
+        );
+    };
 
+    /*
+    * Rendu du composant
+    */
   return (
     <div className={`accordeon ${className || ''}`.trim()}>
       {sections.map((section, index) => (

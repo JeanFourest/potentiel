@@ -8,22 +8,22 @@ function ButtonExample() {
 
   const codeExample1 = `
   <Button 
-        text="ok"
-        onClick={() => handleClick()}
-        extraClass="danger"
-        disabled={true}
-    />
+    text="ok"
+    onClick={...}
+    extraClass="danger"
+    disabled={true}
+  />
     `;
 
   const codeExample2 = `
   import { FaBeer } from "react-icons/fa";
   <Button 
-            text=""
-            icon={<FaBeer />}
-            onClick={() => handleClick()}
-            extraClass="primary"
-            disabled={false}
-        />
+    text=""
+    icon={<FaBeer />}
+    onClick={...}
+    extraClass="primary"
+    disabled={false}
+  />
     `;
 
   return (

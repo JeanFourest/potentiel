@@ -16,6 +16,18 @@ Props de l'input :
 - `placeholder`: `string`: placeholder de l'input
 - `name`: `string`: nom de l'input
 
+```javascript
+<Input
+  label="Texte"
+  type="text"
+  value={...}
+  onChange={...}
+  required={true}
+  placeholder="Entrez votre texte"
+  name="text"
+/>
+```
+
 ## Button
 
 Props du button:
@@ -29,6 +41,15 @@ Props du button:
   - `success`: bouton vert et texte en blanc
 - `onClick: () => void`
 - `disabled?: boolean`: props permettant de activer ou désactiver l'utilisation du button
+
+```javascript
+<Button 
+    text="ok"
+    onClick={...}
+    extraClass="danger"
+    disabled={true}
+  />
+```
 
 ## Checkbox
 

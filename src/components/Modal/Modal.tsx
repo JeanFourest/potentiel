@@ -1,6 +1,9 @@
 import React from 'react';
 import './Modal.css';
 
+/*
+ * Propriétées du composant Modal
+ */
 interface ModalProps {
     isOpen: boolean;
     title?: string;
@@ -9,9 +12,15 @@ interface ModalProps {
     onClose: () => void;
 }
 
+/*
+ * Composant Modal
+ */
 const Modal: React.FC<ModalProps> = ({ isOpen, title, content, imgUrl, onClose }) => {
     if (!isOpen) return null;
 
+    /*
+    * Rendu du composant
+    */
     return (
         <div className="modal-overlay">
             <div className="modal">

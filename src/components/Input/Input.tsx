@@ -1,6 +1,9 @@
 import React from "react";
 import "./Input.css"; // Importation du fichier CSS
 
+/*
+ * Propriétées du composant Input
+ */
 type InputProps = {
   label?: string;
   type: "text" | "email" | "password" | "number" | "date";
@@ -15,6 +18,9 @@ type InputProps = {
   name: string; // Ajout de la propriété name pour la gestion des champs
 };
 
+/*
+ * Composant Input
+ */
 const Input: React.FC<InputProps> = ({
   label,
   type,
@@ -28,6 +34,10 @@ const Input: React.FC<InputProps> = ({
   placeholder = "",
   name, // Récupération du nom
 }) => {
+
+  /*
+  * Rendu du composant
+  */
   return (
     <div className="input-container">
       {label && <label htmlFor={name}>{label}</label>}{" "}
