@@ -226,10 +226,17 @@
     margin-bottom: 20px;
 }
 
-.component {
+.component-row {
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.component-column {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
 }
 
 .componentCode {
@@ -238,7 +245,20 @@
     margin: 20px;
 }
 
-.container {
+.container-row {
+    display: flex;
+    flex-direction: row;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border: 1px solid #ddd;
+    border-radius: 5px 5px 0 0;
+    background-color: #bbbbbb2f;
+    justify-content: space-evenly;
+}
+
+.container-column {
+    display: flex;
+    flex-direction: column;
     padding-top: 3%;
     padding-bottom: 3%;
     border: 1px solid #ddd;
@@ -251,12 +271,7 @@
 }
   
 pre {
-    text-align: left;
-    padding: 10px;
-    border: 1px solid #ccc;
-    overflow-x: auto;
-    margin: 0;
-    border-radius: 0 0 5px 5px;
+    margin: 0 !important;
 }
 
 .copy-button {

@@ -1,4 +1,6 @@
-import SelectComponent from './Select'; 
+import SelectComponent from './Select';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'; 
+import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 function SelectExample() {
 
@@ -6,38 +8,57 @@ function SelectExample() {
       console.log('Valeur(s) sélectionnée(s) :', value);
     };
 
-    const codeExample1 = `<select class="select-lg" multiple size="4">
-    <option value="0">Choisis une option</option>
-    <option value="1">Option 1</option>
-    <option value="2">Option 2</option>
-    <option value="3">Option 3</option>
-    <option value="4">Option 4</option>
-    <option value="5">Option 5</option>
-    <option value="6">Option 6</option>
-</select>`;
+    const codeExample1 = `
+    <SelectComponent
+        options={[
+            { value: '0', label: 'Choisis une option' },
+            { value: '1', label: 'Option 1' },
+            { value: '2', label: 'Option 2' },
+            { value: '3', label: 'Option 3' },
+            { value: '4', label: 'Option 4' },
+            { value: '5', label: 'Option 5' },
+            { value: '6', label: 'Option 6' }
+        ]}
+        className='select-lg'
+        disabled=false
+        multiple=true
+        size=4
+        onChange=...
+    />
+`;
 
-    const codeExample2 = `<select class="select-sm">
-    <option value="0">Choisis une option</option>
-    <option value="1">Option 1</option>
-    <option value="2">Option 2</option>
-    <option value="3">Option 3</option>
-    <option value="4">Option 4</option>
-    <option value="5">Option 5</option>
-    <option value="6">Option 6</option>
-</select>`;
+    const codeExample2 = `
+    <SelectComponent
+        options={[
+            { value: '0', label: 'Choisis une option' },
+            { value: '1', label: 'Option 1' },
+            { value: '2', label: 'Option 2' },
+            { value: '3', label: 'Option 3' }
+        ]}
+        className='select-sm'
+        disabled=false
+        multiple=false
+        onChange=...
+    />
+`;
 
-    const codeExample3 = `<select class="select" disabled>
-    <option value="0">Choisis une option</option>
-    <option value="1">Option 1</option>
-    <option value="2">Option 2</option>
-    <option value="3">Option 3</option>
-    <option value="4">Option 4</option>
-    <option value="5">Option 5</option>
-    <option value="6">Option 6</option>
-</select>`;
+    const codeExample3 = `
+    <SelectComponent
+        options={[
+            { value: '0', label: 'Choisis une option' },
+            { value: '1', label: 'Option 1' },
+            { value: '2', label: 'Option 2' },
+            { value: '3', label: 'Option 3' }
+        ]}
+        className='select'
+        disabled=true
+        multiple=false
+        onChange=...
+    />
+`;
 
     return (
-      <div className='component'>
+      <div className='component-row'>
         <div className='componentCode'>
             <SelectComponent
             options={[
@@ -57,9 +78,9 @@ function SelectExample() {
             />
 
             <div className="code-example-container">
-                <pre>
-                    <code>{codeExample1}</code>
-                </pre>
+                <SyntaxHighlighter language="jsx" style={darcula}>
+                    {codeExample1}
+                </SyntaxHighlighter>
                 <button className="copy-button" onClick={() => navigator.clipboard.writeText(codeExample1)}>
                     Copy Code
                 </button>
@@ -81,12 +102,12 @@ function SelectExample() {
             />
 
             <div className="code-example-container">
-            <pre>
-                <code>{codeExample2}</code>
-            </pre>
-            <button className="copy-button" onClick={() => navigator.clipboard.writeText(codeExample2)}>
-                Copy Code
-            </button>
+                <SyntaxHighlighter language="jsx" style={darcula}>
+                    {codeExample2}
+                </SyntaxHighlighter>
+                <button className="copy-button" onClick={() => navigator.clipboard.writeText(codeExample2)}>
+                    Copy Code
+                </button>
             </div>
         </div>
 
@@ -105,12 +126,12 @@ function SelectExample() {
             />
 
             <div className="code-example-container">
-            <pre>
-                <code>{codeExample3}</code>
-            </pre>
-            <button className="copy-button" onClick={() => navigator.clipboard.writeText(codeExample3)}>
-                Copy Code
-            </button>
+                <SyntaxHighlighter language="jsx" style={darcula}>
+                {codeExample3}
+                </SyntaxHighlighter>
+                <button className="copy-button" onClick={() => navigator.clipboard.writeText(codeExample3)}>
+                    Copy Code
+                </button>
             </div>
         </div>
 
