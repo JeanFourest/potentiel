@@ -1,16 +1,15 @@
-
-import Radio from './components/Radio/Radio'
-
+import Radio from './components/Radio/Radio';
 import './App.css';
 import './components/assets/styleGeneral.css';
 
+
 import { useState } from "react";
 import { FaBeer } from "react-icons/fa";
-
 import SelectExample from './components/Select/Select.example';
 import Checkbox from "./components/checkbox/Checkbox";
-import Button from "./components/Button/Button";
+import Button from "./components/Button/Button"; 
 import Input from './components/Input/Input';
+import Tableau, { TableauColumn } from './components/Tableau/Tableau'; // Importez le tableau et le type
 
 function App() {
   const [values, setValues] = useState<(string | number)[]>([]);
@@ -32,7 +31,7 @@ function App() {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value, // Met à jour l'état pour le champ spécifique
+      [name]: value,
     });
   };
 
@@ -41,9 +40,26 @@ function App() {
     console.log('Formulaire soumis:', formData);
   };
 
+  // Exemple de données et colonnes pour le tableau
+  const data = [
+    { id: 1, name: 'Alice', age: 25 },
+    { id: 2, name: 'Bob', age: 30 },
+    { id: 3, name: 'Charlie', age: 35 },
+    { id: 4, name: 'David', age: 40 },
+    { id: 5, name: 'Eve', age: 28 },
+    { id: 6, name: 'Frank', age: 33 },
+  ];
+
+  // Définition des colonnes en utilisant le type TableauColumn
+  const columns: TableauColumn<{ id: number; name: string; age: number }>[] = [
+    { header: 'ID', accessor: 'id' },
+    { header: 'Nom', accessor: 'name' },
+    { header: 'Âge', accessor: 'age' },
+  ];
+
   return (
     <>
-      <SelectExample/>
+      <SelectExample />
       <Checkbox
         group={[
           { label: "All", value: "all", checked: false, checkAll: true },
@@ -67,54 +83,63 @@ function App() {
         disabled={false}
       />
       <Radio titre="titre" labels={["label", "ntm", "bitch"]} />
-      <Button text="ok" onClick={handleClick} extraClass="danger fullWidth" disabled={true}/>
+      <Button text="ok" onClick={handleClick} extraClass="danger fullWidth" disabled={true} />
       <Button icon={<FaBeer />} text="bière" onClick={handleClick} extraClass="success right" disabled={false} />
 
       <form onSubmit={handleSubmit}>
-      <Input
-        label="Texte"
-        type="text"
-        value={formData.text}
-        onChange={handleChange}
-        required
-        placeholder="Entrez votre texte"
-        name="text"  // Assurez-vous que chaque input a un nom unique
+        <Input
+          label="Texte"
+          type="text"
+          value={formData.text}
+          onChange={handleChange}
+          required
+          placeholder="Entrez votre texte"
+          name="text"  
+        />
+        <Input
+          label="Email"
+          type="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+          placeholder="Entrez votre email"
+          name="email"
+        />
+        <Input
+          label="Mot de passe"
+          type="password"
+          value={formData.password}
+          onChange={handleChange}
+          required
+          placeholder="Entrez votre mot de passe"
+          name="password"
+        />
+        <Input
+          label="Nombre"
+          type="number"
+          value={formData.number}
+          onChange={handleChange}
+          placeholder="Entrez un nombre"
+          name="number"
+        />
+        <Input
+          label="Date"
+          type="date"
+          value={formData.date}
+          onChange={handleChange}
+          name="date"
+        />
+        <button type="submit">Soumettre</button>
+      </form>
+
+      {/* Ajoutez le composant Tableau ici */}
+      <Tableau
+        data={data}
+        columns={columns}
+        selectable={true}
+        pagination={true}
+        rowsPerPage={5}
       />
-      <Input
-        label="Email"
-        type="email"
-        value={formData.email}
-        onChange={handleChange}
-        required
-        placeholder="Entrez votre email"
-        name="email"
-      />
-      <Input
-        label="Mot de passe"
-        type="password"
-        value={formData.password}
-        onChange={handleChange}
-        required
-        placeholder="Entrez votre mot de passe"
-        name="password"
-      />
-      <Input
-        label="Nombre"
-        type="number"
-        value={formData.number}
-        onChange={handleChange}
-        placeholder="Entrez un nombre"
-        name="number"
-      />
-      <Input
-        label="Date"
-        type="date"
-        value={formData.date}
-        onChange={handleChange}
-        name="date"
-      />
-      <button type="submit">Soumettre</button>
-    </form>
     </>
   );
 }

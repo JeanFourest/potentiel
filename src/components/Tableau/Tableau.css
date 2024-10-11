@@ -1,0 +1,45 @@
+/* Tableau.css */
+.table-container {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+  }
+  
+  .table-container th,
+  .table-container td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .table-container th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .table-container tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .table-container tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .pagination-container {
+    margin-top: 10px;
+  }
+  
+  .pagination-container button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .pagination-container button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
