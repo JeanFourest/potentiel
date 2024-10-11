@@ -1,13 +1,13 @@
 # Explication d'utilisation des components
 
-## Input 
+## Input
 
 Props de l'input :
 
 - `label`: `string`: nom du label de l'input
-- `type`: `text, email, password, number ou date`: type que l'input doit supporter 
+- `type`: `text, email, password, number ou date`: type que l'input doit supporter
 - `value`: `string`: valeur de l'input
-- `onchange`: `React.ChangeEvent`: 
+- `onchange`: `React.ChangeEvent`:
 - `required`: `boolean`: obligaiton ou non de remplir l'input
 - `minLength`: `number`: longueur minimum de caractères minimum
 - `maxLength`: `number`: longueur maximum de caractère
@@ -43,7 +43,7 @@ Props du button:
 - `disabled?: boolean`: props permettant de activer ou désactiver l'utilisation du button
 
 ```javascript
-<Button 
+<Button
     text="ok"
     onClick={...}
     extraClass="danger"
@@ -224,4 +224,36 @@ Props du carousel :
   <Alert className="alert-warning">this is a warning alert</Alert>
   <Alert className="alert-error">this is an error alert</Alert>
   <Alert className="alert-success">this is a success alert</Alert>
+```
+
+## Tableau
+
+Props du tableau :
+
+- `data`: `[]`tableau de données à afficher.
+- `columns`: `[]`: tableau d'objets définissant les colonnes du tableau. Chaque colonne a un header (nom de la colonne) et un accessor (clé correspondant aux données).
+- `selectable`: `boolean` (optionnel, défaut: `false`): permet de sélectionner les lignes avec des cases à cocher.
+- `pagination`: `boolean` (optionnel, défaut: `true`): permet d'activer ou désactiver la pagination.
+- `rowsPerPage`: `number` (optionnel, défaut: `5`): nombre de lignes à afficher par page (si la pagination est activée).
+
+```javascript
+const data = [
+  { id: 1, name: "John Doe", age: 28 },
+  { id: 2, name: "Jane Smith", age: 34 },
+  { id: 3, name: "Sam Green", age: 45 },
+];
+
+const columns = [
+  { header: "ID", accessor: "id" },
+  { header: "Nom", accessor: "name" },
+  { header: "Âge", accessor: "age" },
+];
+
+<Tableau
+  data={data}
+  columns={columns}
+  selectable={true}
+  pagination={true}
+  rowsPerPage={5}
+/>;
 ```

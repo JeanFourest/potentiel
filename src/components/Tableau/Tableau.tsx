@@ -1,8 +1,7 @@
-// Tableau.tsx
 import { useState } from 'react';
 import './Tableau.css';
 
-export interface TableauColumn<T> {  // Assurez-vous que TableauColumn est exporté ici
+export interface TableauColumn<T> {
   header: string;
   accessor: keyof T;
 }

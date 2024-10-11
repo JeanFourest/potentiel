@@ -1,5 +1,5 @@
 import React from "react";
-import Tableau, { TableauColumn } from "./Tableau"; // Importez le composant Tableau
+import Tableau, { TableauColumn } from "./Tableau";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'; 
 import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 

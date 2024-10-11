@@ -11,8 +11,8 @@ import RadioExample from './components/Radio/Radio.example';
 import CardExample from './components/Card/Card.example';
 import ModalExample from './components/Modal/Modal.example';
 import AccordeonExample from './components/Accordeon/Accordeon.example';
-import CheckboxExample from './components/checkbox/Checkbox.example';
-import ToggleExample from './components/toggle/Toggle.example';
+import CheckboxExample from './components/Checkbox/Checkbox.example';
+import ToggleExample from './components/Toggle/Toggle.example';
 import AlertExample from './components/Alert/Alert.example';
 import TableauExample from './components/Tableau/Tableau.example';
 
